@@ -24,7 +24,6 @@ export class UsersListComponent implements OnInit, OnDestroy {
       this.user$ = this.store.pipe(select(fromUser.getUsers));
 
    }
-
    ngOnDestroy(): void {
       if (this.usersData$) {
          this.usersData$.unsubscribe();
