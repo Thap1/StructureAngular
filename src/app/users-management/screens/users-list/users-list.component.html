@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="jumbotron">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Phone</th>
+          <th>Address</th>
+          <th>Membership</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of (user$ | async)">
+          <td>{{user.name}}</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+
+
+
+    <hr class="my-4">
+
+      <div class="lead float-left">
+        <a class="btn btn-info btn-lg " [routerLink]="['/user-add']" role="button">Add</a>
+      </div>
+      <div class="lead float-left">
+        <a class="btn btn-danger btn-lg "role="button">Delete</a>
+      </div>
+
+  </div>
+</div>
+
